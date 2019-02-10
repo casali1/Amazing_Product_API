@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Add</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script>
+        var mod = angular.module('ProductUpdate', []);
+        mod.controller('ProductUpdateController', function ($scope, $http) {
+
+            $scope.submit = function () {
+                if ($scope.Name) {                    //Check to see if Name is not null.
+                    var product = {                   //Create the product object to send off to the Controller.
+                        "ID": $scope.ID,
+                        "Name": $scope.Name,
+                        "Category": $scope.Category,
+                        "Price": $scope.Price,
+                    }
+
+                    var post = $http({      //Data sent to the Put action method.  
+                        method: "PUT",
+                        url: "http://localhost:60050/api/product/" + product.ID,
+                        dataType: 'json',
+                        data: product,
+                        headers: { "Content-Type": "application/json" }
+                    });
+
+                    post.success(function (data, status) {
+                        alert('Product was updated successfully.');
+                        alert(status);
+                    });
+                    post.error(function (data, status) {
+                        alert(status);
+                    });
+                }
+            }
+        });
+    </script>
+</head>
+
+<body ng-app="ProductUpdate">
+    <h2>Update Existing Product</h2>
+    <form ng-submit="submit()" ng-controller="ProductUpdateController">
+        <div>ID:<input type="text" ng-model="ID" required</div></br>
+        <div>Name:<input type="text" ng-model="Name" required</div></br>
+        <div>Type:<input type="text" ng-model="Category" required</div></br>
+        <div>Price:<input type="text" ng-model="Price"</div></br>
+        <div><input type="submit" id="productsubmit" value="submit"</div></br>
+    </form>
+</body>
+</html>

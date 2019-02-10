@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazing_Product_API", "Amazing_Product_API\Amazing_Product_API.csproj", "{4C252A05-A5A8-4BDA-8DBA-281BF8BAB868}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product_Web", "Product_Web\Product_Web.csproj", "{41E7BFB7-8DED-4B7C-B425-A0A2B3376B80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4C252A05-A5A8-4BDA-8DBA-281BF8BAB868}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C252A05-A5A8-4BDA-8DBA-281BF8BAB868}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C252A05-A5A8-4BDA-8DBA-281BF8BAB868}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41E7BFB7-8DED-4B7C-B425-A0A2B3376B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41E7BFB7-8DED-4B7C-B425-A0A2B3376B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41E7BFB7-8DED-4B7C-B425-A0A2B3376B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41E7BFB7-8DED-4B7C-B425-A0A2B3376B80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
